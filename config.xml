@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp7223c1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
-  <name>ab</name>
-  <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
+  <name>KasaVote</name>
+  <description>Voting is all about kasa</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
   <content src="index.html" />
   <access origin="*" />
@@ -80,7 +80,7 @@
   </platform>
 
   <platform name="wp8">
-    <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />          
+    <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
     <icon src="res/icons/wp8/Background.png" width="159" height="159" />
   </platform>
 
@@ -122,4 +122,5 @@
   <plugin name="cordova-plugin-media-capture" />
   <plugin name="cordova-plugin-compat" />
   <plugin name="cordova-plugin-file"  />
+  <plugin name="cordova-plugin-barcodeScanner"  />
 </widget>
