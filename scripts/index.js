@@ -36,6 +36,9 @@
 
 	}
 
+})();
+
+(function() {
 
 //barcode scanner
 
@@ -71,7 +74,9 @@
 
 
 
+})();
 
+(function() {
 	document.addEventListener('click', myDeviceReady, false);
 	    function myDeviceReady() {
 					document.getElementById("geolocator").onclick = function(){
