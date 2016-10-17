@@ -77,10 +77,13 @@
 })();
 
 (function() {
-	document.addEventListener('click', myDeviceReady, false);
-	    function myDeviceReady() {
+	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+
+	    function onDeviceReady() {
+				
 					document.getElementById("geolocator").onclick = function(){
 					navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
 	    }
 		};
 
