@@ -72,12 +72,11 @@
 
 
 
-	document.addEventListener("click", myDeviceReady.bind(this), false);
-	    function myDeviceReady() {
-					document.getElementById("geolocator").onclick = function(){
+
+					document.getElementById("geolocator").addEventListener("click").onclick = function(){
 					navigator.geolocation.getCurrentPosition(onSuccess, onError);
-	    }
-		};
+	    };
+
 
 			var onSuccess = function(position) {
 						 alert('Latitude: '          + position.coords.latitude          + '\n' +
