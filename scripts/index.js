@@ -79,31 +79,33 @@
 (function() {
 
 
+	function showLocation(position) {
+	            var latitude = position.coords.latitude;
+	            var longitude = position.coords.longitude;
+	            alert("Latitude : " + latitude + " Longitude: " + longitude);
+	         }
 
-					document.getElementById("geolocator").addEventListener("click", function() {
-						navigator.geolocation.getCurrentPosition(onSuccess, onError, );
-					    
-		};
+	         function errorHandler(err) {
+	            if(err.code == 1) {
+	               alert("Error: Access is denied!");
+	            }
 
-			var onSuccess = function(position) {
-						 alert('Latitude: '          + position.coords.latitude          + '\n' +
-									 'Longitude: '         + position.coords.longitude         + '\n' +
-									 'Altitude: '          + position.coords.altitude          + '\n' +
-									 'Accuracy: '          + position.coords.accuracy          + '\n' +
-									 'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-									 'Heading: '           + position.coords.heading           + '\n' +
-									 'Speed: '             + position.coords.speed             + '\n' +
-									 'Timestamp: '         + position.timestamp                + '\n');
-				 };
+	            else if( err.code == 2) {
+	               alert("Error: Position is unavailable!");
+	            }
+	         }
 
-				 // onError Callback receives a PositionError object
-				 //
-				 function onError(error) {
-						 alert('code: '    + error.code    + '\n' +
-									 'message: ' + error.message + '\n');
-				 }
+	         function getLocation(){
 
+	            if(navigator.geolocation){
+	               // timeout at 60000 milliseconds (60 seconds)
+	               var options = {timeout:60000};
+	               navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+	            }
 
-
+	            else{
+	               alert("Sorry, browser does not support geolocation!");
+	            }
+	         }
 
 })();
