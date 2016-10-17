@@ -77,14 +77,12 @@
 })();
 
 (function() {
-	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
-	    function onDeviceReady() {
-				
-					document.getElementById("geolocator").onclick = function(){
-					navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-	    }
+
+					document.getElementById("geolocator").addEventListener("click", function() {
+						navigator.geolocation.getCurrentPosition(onSuccess, onError, );
+					    
 		};
 
 			var onSuccess = function(position) {
