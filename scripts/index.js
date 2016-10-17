@@ -78,8 +78,10 @@
 
 (function() {
 
+
 	document.getElementById("geolocationdata").onclick = function(){
-		 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 60000});
+		alert("here!");
+		 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 6000});
 	}
 
 
