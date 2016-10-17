@@ -36,9 +36,8 @@
 
 	}
 
-})();
 
-(function() {
+
 
 //barcode scanner
 
@@ -74,9 +73,6 @@
 
 
 
-})();
-
-(function() {
 
 
 	function showLocation(position) {
