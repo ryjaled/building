@@ -37,16 +37,11 @@
 	}
 
 
-})();
-
-
-(function() {
-
 	document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 	function onDeviceReady() {
 
 
-		document.getElementById("barcodeScanner").onclick = function barcode(){
+		document.getElementById("barcodeScanner").onclick = function(){
 			//alert("here");
 			cordova.plugins.barcodeScanner.scan(
 		 function (result) {
