@@ -75,10 +75,9 @@
 	document.addEventListener("deviceready", myDeviceReady, false);
 	    function myDeviceReady() {
 					document.getElementById("geolocator").onclick = function(){
-
 					navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	    }
-		}
+		};
 
 			var onSuccess = function(position) {
 						 alert('Latitude: '          + position.coords.latitude          + '\n' +
