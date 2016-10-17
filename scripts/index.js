@@ -74,7 +74,7 @@
 
 	document.addEventListener("deviceready", myDeviceReady, false);
 	    function myDeviceReady() {
-					document.getElementById("gelocator").onclick = function(){
+					document.getElementById("geolocator").onclick = function(){
 
 					navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	    }
