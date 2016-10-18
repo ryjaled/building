@@ -94,6 +94,13 @@
 					 'Heading: '           + position.coords.heading           + '\n' +
 					 'Speed: '             + position.coords.speed             + '\n' +
 					 'Timestamp: '         + position.timestamp                + '\n');
+
+					 var mapCanvas = document.getElementById("map");
+ var mapOptions = {
+	 center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+	 zoom: 10
+ }
+ var map = new google.maps.Map(mapCanvas, mapOptions);
  };
 
  // onError Callback receives a PositionError object
