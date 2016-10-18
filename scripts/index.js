@@ -114,3 +114,38 @@
 
 
 })();
+
+(function() {
+
+
+
+
+		document.getElementById("geolocationdatawatch").onclick = function(){
+			alert("here!");
+			 navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 60000});
+		}
+
+
+		var onSuccess = function(position) {
+			 alert('Latitude: '          + position.coords.latitude          + '\n' +
+						 'Longitude: '         + position.coords.longitude         + '\n');
+
+						 var mapCanvas = document.getElementById("map");
+	 var mapOptions = {
+		 center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+		 zoom: 10
+	 }
+	 var map = new google.maps.Map(mapCanvas, mapOptions);
+	 };
+
+	 // onError Callback receives a PositionError object
+	 //
+	 function onError(error) {
+			 alert('code: '    + error.code    + '\n' +
+						 'message: ' + error.message + '\n');
+	 }
+
+
+
+
+})();
