@@ -98,10 +98,6 @@
 					 'Speed: '             + position.coords.speed             + '\n' +
 					 'Timestamp: '         + position.timestamp                + '\n');
 
-			 var myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-			 var mapOptions = {zoom: 4,center: myLatlng}
-			 var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			 var marker = new google.maps.Marker({position: myLatlng,map: map});
  };
 
  // onError Callback receives a PositionError object
@@ -135,12 +131,6 @@ google.maps.event.addDomListener(window, 'load', onSuccess);
 			 alert('Latitude: '          + position.coords.latitude          + '\n' +
 						 'Longitude: '         + position.coords.longitude         + '\n');
 
-						 var mapCanvas = document.getElementById("map");
-	 var mapOptions = {
-		 center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-		 zoom: 10
-	 }
-	 var map = new google.maps.Map(mapCanvas, mapOptions);
 	 };
 
 	 // onError Callback receives a PositionError object
