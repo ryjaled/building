@@ -71,7 +71,7 @@
 
 
 	}
-	};
+	} ;
 
 	})();
 
@@ -123,13 +123,15 @@ google.maps.event.addDomListener(window, 'load', onSuccess);
 
 		document.getElementById("geolocationdatawatch").onclick = function(){
 			alert("here!");
-			 navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 60000});
+			 navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000});
 		}
 
 
 		var onSuccess = function(position) {
-			 alert('Latitude: '          + position.coords.latitude          + '\n' +
-						 'Longitude: '         + position.coords.longitude         + '\n');
+			var element = document.getElementById('geolocationwatch');
+			 element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+													 'Longitude: ' + position.coords.longitude     + '<br />' +
+													 '<hr />'      + element.innerHTML;
 
 	 };
 
