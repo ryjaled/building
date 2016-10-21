@@ -124,5 +124,9 @@
   <plugin name="cordova-plugin-file"  />
   <plugin name="cordova-plugin-barcodescanner"  />
   <plugin name="cordova-plugin-geolocation"  />
-  <plugin name="cordova-plugin-googlemaps"  />
+  <plugin name="cordova-plugin-app-version">
+   <param name="id" value="plugin.google.maps" />
+   <variable name="API_KEY_FOR_ANDROID" value="$MYKEY" />
+</plugin>
+
 </widget>
