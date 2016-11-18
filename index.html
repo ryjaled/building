@@ -110,6 +110,7 @@
 				<button id="barcodeScanner">Barcode Scanner</button>
 				<button id="geolocationdata">Geolocation</button>
 				<button id="geolocationdatawatch">GeolocationWatch</button>
+				<button id="geolocationdatamap" onclick="initMap()">GeolocationButton</button>
 				<!-- <button id="map-canvas">GeolocationWatch</button> -->
 
 				<div id="geolocationwatch"></div>
@@ -126,7 +127,26 @@
 			</div><!-- /content -->
 		</div><!-- /page -->
 
+<script>
+		function initMap() {
+			var latval = 5.75958;
+			var lngval = -0.22019;
+		  var myLatLng = {lat: latval, lng: lngval};
 
+		  var map = new google.maps.Map(document.getElementById('map'), {
+		    zoom: 15,
+		    center: myLatLng
+		  });
+
+		  var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map,
+		    title: 'Map!'
+		  });
+		}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrtUsFFUKE_DCSjYwPrpmEPe7ET2EgD-8&callback=initMap"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 			<script type="text/javascript" src="cordova.js"></script>
 			<script type="text/javascript" src="scripts/platformOverrides.js"></script>
