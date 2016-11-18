@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myapp7223c1" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
-  <name>KasaVoteGeoMan</name>
-  <description>Voting is all about KVGM</description>
+  <name>ab</name>
+  <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
   <content src="index.html" />
   <access origin="*" />
@@ -17,7 +17,6 @@
   <allow-intent href="sms:*" />
   <allow-intent href="mailto:*" />
   <allow-intent href="geo:*" />
-
 
   <platform name="android">
     <allow-intent href="market:*" />
@@ -81,7 +80,7 @@
   </platform>
 
   <platform name="wp8">
-    <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
+    <icon src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />          
     <icon src="res/icons/wp8/Background.png" width="159" height="159" />
   </platform>
 
@@ -122,12 +121,7 @@
   <plugin name="cordova-plugin-camera"  />
   <plugin name="cordova-plugin-media-capture" />
   <plugin name="cordova-plugin-compat" />
-  <plugin name="cordova-plugin-file"  />
   <plugin name="cordova-plugin-barcodescanner"  />
-  <plugin name="cordova-plugin-geolocation"  />
-  <plugin name="cordova-plugin-app-version">
-   <param name="id" value="plugin.google.maps" />
-   <variable name="API_KEY_FOR_ANDROID" value="$MYKEY" />
-</plugin>
-
+  <plugin name="cordova-plugin-file"  />
+  <plugin name="cordova-plugin-geolocation" />
 </widget>
